@@ -4,8 +4,8 @@ from influxdb_client.client.write_api import SYNCHRONOUS
 from datetime import datetime, timezone
 
 token = os.environ.get("INFLUXDB_TOKEN")
-org = "marco.cuce97@hotmail.com"
-url = "https://eu-central-1-1.aws.cloud2.influxdata.com"
+org = "****"
+url = "****"
 
 client = influxdb_client.InfluxDBClient(url=url, token=token, org=org)
 
