@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+  </head>
+  <title>Configuration Setup</title>
+  <style>
+    .content {
+      max-width: 1000px;
+      margin: auto;
+    }
+  </style>
+  <body>
+    <div>
+      <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="/">Back to Home</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="content">
+      <h1>Configuration Setup Page</h1>
+      <br /><br />
+      <h1>Enter the configuration here</h1>
+      <br />
+      <form action="{{ url_for('setup_configuration') }}" method="post">
+        <label for="sample_frequency">Sample Frequency</label>
+        <input
+          type="number"
+          min="1000"
+          step="100"
+          name="sample_frequency"
+          value=""
+          required
+        /><br /><br />
+        <label for="max_gas_value">Max Gas Value</label>
+        <input
+          type="number"
+          min="0"
+          max="4095"
+          step="10"
+          name="max_gas_value"
+          value=""
+          required
+        /><br /><br />
+        <label for="min_gas_value">Min Gas Value</label>
+        <input
+          type="number"
+          min="0"
+          max="4095"
+          step="10"
+          name="min_gas_value"
+          value=""
+          required
+        /><br /><br />
+        <label for="technology">Technology</label>
+        <input
+          type="number"
+          min="0"
+          max="1"
+          name="technology"
+          value=""
+          required
+        /><br /><br />
+
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
